@@ -257,8 +257,6 @@ Alternatively, configure GitHub Pages to build and deploy the application automa
 
 ## Author
 
-**Your Name**
-
 GitHub: [Goutham Ketham](https://github.com/goutham-ketham)
 
 ## License
