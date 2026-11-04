@@ -2,20 +2,23 @@
 
 A simple, interactive chatbot application built using React and Vite. The application provides a chat interface where users can send messages and receive responses from a chatbot powered by the `supersimpledev` package.
 
+The chatbot supports three commands: flipping a coin, rolling a dice, and getting today's date.
+
 ## Live Demo
 
 [View the Live Chatbot](https://goutham-ketham.github.io/ChatBot/)
 
-
 ## Features
 
 - Interactive chatbot interface with separate user and robot messages.
+- Flip a coin to get heads or tails.
+- Roll a dice to generate a random number.
+- Get today's date.
 - Send messages using the Send button or the Enter key.
 - Clear the input field using the Escape key.
 - Loading indicator while the chatbot generates a response.
 - Automatic scrolling to the latest conversation.
 - Responsive chat layout with user and robot profile images.
-- Production-ready build generated using Vite.
 
 ## Tech Stack
 
@@ -69,7 +72,7 @@ chatbot-project/
 
 Make sure you have the following installed:
 
-- Node.js (a recent LTS version is recommended)
+- Node.js
 - npm
 - Git
 
@@ -86,13 +89,13 @@ git --version
 1. Clone the repository:
 
 ```bash
-https://github.com/goutham-ketham/ChatBot.git
+git clone https://github.com/goutham-ketham/ChatBot.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd ChatBot
+cd Chatbot-project
 ```
 
 3. Install the dependencies:
@@ -135,7 +138,7 @@ npm run preview
 
 The `App.jsx` component maintains the chat conversation using React's `useState` hook.
 
-The initial conversation is empty. The application displays a welcome message until the user sends their first message.
+The application displays a welcome message until the user sends their first message.
 
 ### 2. Sending Messages
 
@@ -157,6 +160,8 @@ const response = await Chatbot.getResponseAsync(inputText);
 ```
 
 The returned response is added to the conversation and displayed in the chat interface.
+
+The chatbot supports coin flips, dice rolls, and today's date.
 
 ### 4. Rendering Messages
 
@@ -190,8 +195,6 @@ The deployed application does not require React source files or `node_modules` t
 
 The first deployment was performed by uploading the contents of the `dist` folder directly to the GitHub repository.
 
-This allows GitHub Pages to serve the built application as a static website.
-
 The deployment process is:
 
 1. Run `npm run build`.
@@ -217,7 +220,7 @@ export default defineConfig({
 
 The `base` option configures the application to use the `/ChatBot/` path when deployed under a GitHub Pages project repository.
 
-**Important:** If you change the repository name, update the `base` value in `vite.config.js` to match the new repository name before generating a new production build.
+If you change the repository name, update the `base` value in `vite.config.js` to match the new repository name before generating a new production build.
 
 For example, if the repository is named `my-chatbot`, use:
 
@@ -247,26 +250,16 @@ Alternatively, configure GitHub Pages to build and deploy the application automa
 
 ## Limitations
 
-- The chatbot response generation depends on the `supersimpledev` package.
-- The application currently uses a basic chat interface without user authentication.
+- The chatbot supports only coin flips, dice rolls, and today's date.
+- Chatbot responses depend on the `supersimpledev` package.
 - Conversation messages are maintained in React state and are not saved permanently.
 - The project does not include a custom backend or database.
-- Chatbot responses depend on the behavior and availability of the response-generation package.
-
-## Future Improvements
-
-- Add persistent conversation history using local storage or a database.
-- Improve the interface for mobile devices.
-- Add support for multiple conversations.
-- Add error handling for failed chatbot requests.
-- Add a typing indicator and improved loading animations.
-- Implement automatic deployment using GitHub Actions.
 
 ## Author
 
-**Goutham Ketham**
+**Your Name**
 
-GitHub: [Goutham-Ketham](https://github.com/goutham-ketham)
+GitHub: [Goutham Ketham](https://github.com/goutham-ketham)
 
 ## License
 
